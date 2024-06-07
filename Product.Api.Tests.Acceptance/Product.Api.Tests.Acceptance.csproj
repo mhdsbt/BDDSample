@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Features\" />
     <Folder Include="Models\" />
   </ItemGroup>
 
@@ -16,7 +15,17 @@
     <PackageReference Include="FluentAssertions" Version="5.10.3" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.1" />
+	<PackageReference Include="NUnit" Version="3.13.3" />
+	<PackageReference Include="NUnit3TestAdapter" Version="4.4.2" />
+	<PackageReference Include="NUnit.Analyzers" Version="3.6.1" />
+	<PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.7.38" />
     <PackageReference Include="SpecFlow.xUnit" Version="3.7.38" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Features\ProductManageMent.feature.cs">
+      <DependentUpon>ProductManagement.feature</DependentUpon>
+    </Compile>
   </ItemGroup>
 
 </Project>
