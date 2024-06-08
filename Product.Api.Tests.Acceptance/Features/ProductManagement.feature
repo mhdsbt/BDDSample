@@ -11,13 +11,13 @@ Scenario: Successfully retrieve all products
 	And the response status code should be 200
 
 Scenario: No Product Avaiable 
-	 Given  the product servuice is avaibale 
-	 When i request to get all productcs
-	 Then  the response should  contain contain Empty list
+	 Given  the product service is available 
+	 When I request to get all products
+	 Then  the response should contain Empty list
 	 And the response status code should be 200
 
 Scenario: service is down 
-	Given  the product servuice is unavaibale 
-	When i request to get all productcs
+	Given  the product service is unavailable 
+	When I request to get all products
 	Then  the response status code should be 503
-	And the response Message "Service is not Avaiable"
+	And the response Message should be "Service is not Avaiable"
