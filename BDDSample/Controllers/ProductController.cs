@@ -12,7 +12,7 @@ namespace CancellationTokenSample.Controllers
         private IApplicationDbContext _context;
         public ProductController(IApplicationDbContext applicationDbContext)
         {
-            _context = applicationDbContext;
+            _context = applicationDbContext; 
         }
 
 
